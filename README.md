@@ -1,2 +1,3 @@
 
-# This is my Python developer roadmap 2018
+### Core python concepts, designs and algorithm implementations.
+---
