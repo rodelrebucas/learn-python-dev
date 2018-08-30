@@ -1,3 +1,3 @@
 
-### Core python concepts, designs and algorithm implementations.
+### Python core, designs and algorithm implementations.
 ---
