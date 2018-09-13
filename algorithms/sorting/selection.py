@@ -1,28 +1,5 @@
 """
 
-<<<<<<< HEAD
-selection.py
-
-
-
-
-
-
-
-"""
-
-data = [9, 1, 8, 6, 5, 2]
-small = data[0]
-small_index = 0
-for i in range(len(data)):
-    for j in range(len(data)):
-        if data[j] < small:
-            small_index = j
-    print(small_index)
-    data.pop(data[small_index])
-
-
-=======
 Selection Sort
 
     1. Set minimum value
@@ -81,4 +58,3 @@ if __name__ == '__main__':
 
     for i in range(len(data)):
         print(selectionSort(data[i]))
->>>>>>> 4106731d67ea661ed2ab6b3358447a7d0ec77fa8
