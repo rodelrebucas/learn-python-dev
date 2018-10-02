@@ -12,6 +12,10 @@
 class Node(object):
     def __init__(self, data):
         self.data = data
+        # Use this if you want double linked list,
+        # and avoid tracking previous node with a temporary pointer
+        self.prev_node = None 
+        
         self.next_node = None
 
 class LinkedList(object):
