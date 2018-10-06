@@ -6,13 +6,10 @@
 '''
 
 # function
-def multiply_to_two(num)
+def multiply_to_two(num):
     return num * 2
-
-print(multiply_to_two(2))
+print(multiply_to_two(2)) # 4
 
 # lambda
-mul = lambda x, y ; return x * y
-print(mul(2))
-
-map(mul, [1,2,3,4,5])
+mul = lambda x , y : x * y
+print(mul(2,4)) # 8
