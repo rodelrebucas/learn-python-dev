@@ -12,5 +12,7 @@ def multiply_to_two(num)
 print(multiply_to_two(2))
 
 # lambda
-mul = lambda x ; return x * 2
+mul = lambda x, y ; return x * y
 print(mul(2))
+
+map(mul, [1,2,3,4,5])
