@@ -19,8 +19,9 @@ import time
 # then execute back the remaining lines of code
 async def say_after(delay, what):
     # wait for this function to finish
-    # this is a sleep function
+    # this is a asyncio sleep function
     # will pause for delay duration
+    # and pass back control to event loop
     await asyncio.sleep(delay)
 
     # run this after waiting
@@ -33,8 +34,8 @@ async def main():
 
     # await this function
     # simply executing this function
-    await say_after(1, 'hello')
-    await say_after(2, 'world')
+    await say_after(0, 'hello')
+    await say_after(0, 'world')
 
     print('finished at', time.strftime('%X'))
 
@@ -56,7 +57,7 @@ finished at 16:49:57
 
 
 # main will serve as the main entry point
-async def main():
+async def main_two():
 
     # asyncio.create_task makes the functions
     # runs in concurrent manner
@@ -66,14 +67,19 @@ async def main():
     task2 = asyncio.create_task(
         say_after(2, 'world'))
 
-    print('started at', time.strftime('%X'))
+    print('main two started at', time.strftime('%X'))
 
+    # coroutines must be awaited in order to be executed
+    # await tells the event loop that there are other coroutine
+    # needed to be executed
     await task1
     await task2
 
     print('finished at', time.strftime('%X'))
 
 
+# run the event loop
+asyncio.run(main_two())
 # output
 '''
 started at 17:33:30

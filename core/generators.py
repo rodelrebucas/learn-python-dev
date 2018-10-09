@@ -7,7 +7,7 @@ Generators
 
 Yield
     Yield pauses the current state of the function, then
-    continues for succesive calls wherever it left of.
+    continues for successive calls wherever it left of.
 
 Iterators
     objects that we can iterate with
