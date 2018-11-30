@@ -3,7 +3,7 @@
 
     A last in first out structure
 
-    Operations:
+    Main operations:
         pop()
         push()
         peek()
