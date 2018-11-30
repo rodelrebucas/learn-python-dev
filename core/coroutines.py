@@ -1,7 +1,7 @@
 '''
     What is a coroutine?
         Coroutine is a just like a simple function that can pause to allow other block of codes or
-        a other function to execute then resume its execution once the other block of codes is done.        
+        another function to execute then resume its execution once the other block of codes is done.        
 
     Examples are taken from:
         From https://docs.python.org/3/library/asyncio-task.html    
@@ -19,7 +19,7 @@ import time
 # then execute back the remaining lines of code
 async def say_after(delay, what):
     # wait for this function to finish
-    # this is a asyncio sleep function
+    # this asyncio sleep function
     # will pause for delay duration
     # and pass back control to event loop
     await asyncio.sleep(delay)
