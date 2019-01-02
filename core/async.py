@@ -16,6 +16,8 @@ def is_prime(n):
 async def highest_prime_below(n):
     print(f"Highest prime below {n}")
     for y in range(n-1, 0, -1):
+        # await passes control to event loop
+        # execute another function
         await asyncio.sleep(0)
         if is_prime(y):
             print(f"Highest prime below {n} is {y}")
