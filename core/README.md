@@ -8,7 +8,7 @@
 
 ### Parallelism
 
-     - for Cpu bound tasks. (Computations, etc..)
+    - for Cpu bound tasks. (Computations, etc..)
 
     - performing multiple operation at the same time.
 
