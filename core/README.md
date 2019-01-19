@@ -8,6 +8,8 @@
 
 ### Parallelism
 
+     - for Cpu bound tasks. (Computations, etc..)
+
     - performing multiple operation at the same time.
 
     - Can also show concurrency by performing tasks at same time on a multi core
