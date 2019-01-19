@@ -34,4 +34,4 @@
 
         - Multiple threads
 
-        - Multiple process
+        - Multiple processes
