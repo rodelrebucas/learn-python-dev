@@ -1,3 +1,11 @@
-# learn-python-dev
+## Python developer - contains guides and fundamentals on programming with python.
+
 ---
-### Python core, designs and algorithm implementations.
+
+### Contents:
+
+A. Python core, designs and algorithm implementations.
+
+B. Solid guide
+
+C. Writing clean code
