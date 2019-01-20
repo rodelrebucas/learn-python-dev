@@ -6,6 +6,40 @@
 2. [Functions](#functions)
 3. [Comments](#comments)
 
+### TODOS
+
+[ ] Functions should only be one level of abstraction
+
+[ ] Remove duplicate code
+
+[ ] Don't use flags as function parameters
+
+[ ] Avoid Side Effects
+
+[ ] Favor functional programming over imperative programming
+
+[ ] Encapsulate conditionals
+
+[ ] Avoid negative conditionals
+
+[ ] Avoid conditionals
+
+[ ] Don't over-optimize
+
+[ ] Remove dead code
+
+[ ] Objects and Data Structures
+
+[ ] Classes
+
+[ ] Prefer composition over inheritance
+
+[ ] Single concept per test
+
+[ ] Don't ignore caught errors
+
+[ ] Use consistent capitalization
+
 ### Mirror guide for python from [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
 
 #### Variables
