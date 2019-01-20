@@ -21,39 +21,41 @@ Selection Sort
 
 """
 
+
 def selectionSort(data):
     for i in range(len(data)):
         ## Set a minimum value
         # set minimum index with the current iteration index
-        min_index = i   
+        min_index = i
 
         ## Find the minimum value
         # inner iteration for comparing each
         # element against the minimum element.
-        for j in range(i+1,len(data)):  ## Do not include the starting element since it is the set minimum value
-                                        #  so there's no need for comparison
-            if data[j] < data[min_index]: ## Ascending
+        for j in range(
+            i + 1, len(data)
+        ):  ## Do not include the starting element since it is the set minimum value
+            #  so there's no need for comparison
+            if data[j] < data[min_index]:  ## Ascending
                 ## Get the index of the minimum element
                 min_index = j
-        
-        ## If minimum value is already in placed 
+
+        ## If minimum value is already in placed
         # there is no need to swap
         # meaning , current index is the minimum element
         if i != min_index:
             ## Swap current index with the minimum index
             data[i], data[min_index] = data[min_index], data[i]
-    
+
     return data
 
 
-if __name__ == '__main__':
-    
-    data =[ 
-        [3, 4 , 6, 2, 3, 1, 1, 2, 2, 37, 0],
+if __name__ == "__main__":
+
+    data = [
+        [3, 4, 6, 2, 3, 1, 1, 2, 2, 37, 0],
         [1, 2, 3, 4, 5],
         [2.4, 99, 2, 4, 1, 1, -1, 0, 0],
-        [9, 8, 7, 6, 3, 2, 1]
-
+        [9, 8, 7, 6, 3, 2, 1],
     ]
 
     for i in range(len(data)):

@@ -11,12 +11,14 @@ fibonnaci sequence: 0 1 1 2 3 ...
 
 """
 
+
 def fibonacci(n):
     a = 0
     b = 1
     for count in range(n):
         print(a)
-        a,b = b, a+b
+        a, b = b, a + b
+
 
 if __name__ == "__main__":
     # print the 1st 5 numbers of the sequence
