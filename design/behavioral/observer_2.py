@@ -1,3 +1,5 @@
+# Push Model = subject notifies the subscribers
+# Pull Model =  observer gets update from subject
 # Subject
 class NewsPublisher:
     def __init__(self):
