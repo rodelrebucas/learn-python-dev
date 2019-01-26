@@ -21,7 +21,7 @@
 
 - Spaghetti code - no OOP design and poor architecture
 
-- Golder Hammer - a familiar solution to all problem without considering whether it suits the need.
+- Golden Hammer - a familiar solution to all problem without considering whether it suits the need.
 
 - Lava flow - dead/unneccesary codes
 
@@ -41,5 +41,7 @@
 References:
 
 - [Quora](https://www.quora.com/What-is-the-difference-between-Creational-Structural-and-Behavioral-Patterns)
+
+- _https://refactoring.guru_
 
 - Learning Python Design Patterns
