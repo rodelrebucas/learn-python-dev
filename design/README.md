@@ -21,7 +21,7 @@
 
 - Spaghetti code - no OOP design and poor architecture
 
-- Golder Hammer - a familiat solution to all problem without considering whether it suits the need.
+- Golder Hammer - a familiar solution to all problem without considering whether it suits the need.
 
 - Lava flow - dead/unneccesary codes
 
