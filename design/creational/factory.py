@@ -1,5 +1,5 @@
 # - Simple factory pattern is responsible for creating objects *with different types*.
-# - Subclass descdes what kind  of object is instantiated
+# - Subclass decides what kind  of object is instantiated
 # - Creates only one product
 
 ### Simple factory pattern
