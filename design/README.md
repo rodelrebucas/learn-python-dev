@@ -43,3 +43,5 @@ References:
 - [Quora](https://www.quora.com/What-is-the-difference-between-Creational-Structural-and-Behavioral-Patterns)
 
 - Learning Python Design Patterns
+
+- [Sourcemaking](https://sourcemaking.com/)
