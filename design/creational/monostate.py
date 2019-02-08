@@ -1,6 +1,8 @@
 # Sharing state of multiple instances of an object
 # Also called Borg pattern
 
+
+# [WIP] explanations
 class Borg(object):
     __shared_state = {}
 
