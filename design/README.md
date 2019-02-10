@@ -45,3 +45,5 @@ References:
 - _https://refactoring.guru_
 
 - Learning Python Design Patterns
+
+- [Sourcemaking](https://sourcemaking.com/)
