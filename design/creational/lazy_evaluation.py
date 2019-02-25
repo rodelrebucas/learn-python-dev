@@ -1,3 +1,5 @@
+# - access/create an object's property only if it is called
+
 from __future__ import print_function
 import functools
 
