@@ -179,8 +179,8 @@ Function arguments (2 or fewer ideally)
 
       class Menu:
         def **init**(self, config: dict):
-        title = config["title"]
-        body = config["body"] # ...
+          title = config["title"]
+          body = config["body"] # ...
 
       menu = Menu(
         {
@@ -290,7 +290,7 @@ Function arguments (2 or fewer ideally)
 
   Good:
 
-      defcombine(a, b):
+      def combine(a, b):
         return a + b;
 
 - Avoid positional markers

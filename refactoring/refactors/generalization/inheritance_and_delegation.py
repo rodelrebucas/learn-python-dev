@@ -21,7 +21,7 @@ class SocialMedia:
     media = "my-media"
     profile:Profile
 
-    def __init__(self, profile)
+    def __init__(self, profile):
         self.profile = profile
 
     # delegate method

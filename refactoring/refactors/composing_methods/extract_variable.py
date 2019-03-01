@@ -15,3 +15,4 @@ def renderBanner(self):
 
     if isMacOs and isIE and self.wasInitialized() and wasResized:
         # do something
+        pass
