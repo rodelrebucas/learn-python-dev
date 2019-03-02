@@ -20,7 +20,7 @@ class Anything(object):
 
 # Concrete implementations
 class AnythingA(Anything):
-     def build_step_1(self):
+    def build_step_1(self):
         pass
     
     def build_step_2(self):
@@ -28,7 +28,7 @@ class AnythingA(Anything):
 
 
 class AnythingB(Anything):
-     def build_step_1(self):
+    def build_step_1(self):
         pass
     
     def build_step_2(self):
