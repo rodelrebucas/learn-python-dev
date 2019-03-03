@@ -29,7 +29,7 @@ class lazy_property(object):
 def lazy_property2(fn):
     attr = "_lazy__" + fn.__name__
 
-    # this will be property of class - self is (Person)
+    # this will be the property of class - self is (Person)
     @property
     def _lazy_property(self):
         if not hasattr(self, attr):

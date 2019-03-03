@@ -25,11 +25,11 @@ class Trip(metaclass=ABCMeta):
     @abstractclassmethod
     def setTransport(self):
         pass
-    
+
     @abstractclassmethod
-    def returnHome(self)
+    def returnHome(self):
         pass
-    
+
     # template method
     def itenerary(self):
         # steps that makes up the algorithm/business logic
@@ -38,25 +38,31 @@ class Trip(metaclass=ABCMeta):
         self.day2()
         self.returnHome()
 
+
 # implemented in each type of trips
 class SouthTrip(Trip):
-
     def day1(self):
         pass
+
     def day2(self):
         pass
+
     def setTransport(self):
         pass
+
     def returnHome(self):
         pass
 
-class NorthTrip(Trip):
 
+class NorthTrip(Trip):
     def day1(self):
         pass
+
     def day2(self):
         pass
+
     def setTransport(self):
         pass
+
     def returnHome(self):
         pass

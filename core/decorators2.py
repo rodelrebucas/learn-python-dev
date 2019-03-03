@@ -43,7 +43,7 @@ class Counter:
     def __init__(self):
         self.count = 0
 
-    # implement this method to make class callable
+    # Special method that is invoke when instance or decorated function is innvoke
     def __call__(self):
         self.count += 1
 
@@ -64,7 +64,7 @@ class CounterCls:
         self.count = 0
         self.func = func
 
-    # implement this method to make class callable
+    # Special method that is invoke when instance or decorated function is innvoke
     def __call__(self, *args, **kwargs):
         self.count += 1
         print(f"Calling {self.func.__name__} with count: ", self.count)

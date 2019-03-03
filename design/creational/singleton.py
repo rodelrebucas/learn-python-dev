@@ -43,7 +43,7 @@ class Car:
 
     def __init__(self):
         self.x = 1
-        # special variable for storing states
+        # __dict__ special variable for storing property / state
         self.__dict__ = self.__shared_state
 
 
@@ -61,6 +61,7 @@ class MetaSingleton(type):
 
     def __call__(cls, *args, **kwargs):
         print("MetaSingleton:", args)
+        # cls is the class Object Logger
         if cls not in cls._instances:
             cls._instances[cls] = super(MetaSingleton, cls).__call__(*args, **kwargs)
         return cls._instances[cls]

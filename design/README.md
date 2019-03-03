@@ -47,3 +47,5 @@ References:
 - Learning Python Design Patterns
 
 - [Sourcemaking](https://sourcemaking.com/)
+
+- [faif/python-patterns](https://github.com/faif/python-patterns)

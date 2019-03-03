@@ -38,7 +38,7 @@ class SellStockOrder(Order):
         self.stock = stock
 
     def execute(self):
-        self.stock.buy()
+        self.stock.sell()
 
 
 # Receiver
@@ -59,7 +59,7 @@ class Agent:
     def __init__(self):
         self.__orderQueue = []
 
-    def (self, order):
+    def placeOrder(self, order):
         self.__orderQueue.append(order)
         order.execute()
 

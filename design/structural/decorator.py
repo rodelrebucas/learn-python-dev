@@ -1,2 +1,1 @@
-# WIP
-# or see decorators on core/
+# See decorators on core/
