@@ -20,6 +20,6 @@ Study notes/implementations for:
 
 3. Matching parenthesis
 
-4. Hash tables
+4. Hash tables/ Hash functions
 
 5. quicksort, bubblesorts
