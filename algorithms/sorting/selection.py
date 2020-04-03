@@ -1,5 +1,4 @@
 """
-
 Selection Sort
 
     1. Set minimum value
