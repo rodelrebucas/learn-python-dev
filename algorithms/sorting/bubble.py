@@ -12,8 +12,6 @@ Bubble sort
 
 import pytest
 
-xfail = pytest.mark.xfail
-
 
 def bubbleSort(l):
     # outer iterations is len(l) - 1
