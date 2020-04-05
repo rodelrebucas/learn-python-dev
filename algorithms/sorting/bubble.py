@@ -18,7 +18,7 @@ xfail = pytest.mark.xfail
 def bubbleSort(l):
     # outer iterations is len(l) - 1
     # e.g [5,4,3,2,1] = 1, 2, 3, 4 = iterations
-    # this makes sure j + 1 won't exceed with list length
+    # this makes sure j + 1 won't exceed with list's length
     for i in range(len(l) - 1, 0, -1):
         for j in range(i):
             if l[j] > l[j + 1]:
