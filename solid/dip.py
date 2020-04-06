@@ -1,4 +1,4 @@
-# DIP - Dependency Inversion Principle
+# DIP - Dependency Injection Principle
 # High level modules should not depend on low level modules.
 # Both should depend upon abstractions.
 
