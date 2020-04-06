@@ -63,6 +63,6 @@ class HumanWorker(Human):
         pass
 
 
-class RobotWorker(Human):
+class RobotWorker(Robot):
     def doWork(self):
         pass
