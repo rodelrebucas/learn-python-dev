@@ -1,4 +1,4 @@
-## Python developer - contains guides and fundamentals on programming with python.
+## Python starter - contains guides and fundamentals on programming with python.
 
 ---
 
