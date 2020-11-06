@@ -1,7 +1,13 @@
-"""
-    Binary search.
 
-    Time Complexity: O(logN), balanced tree O(n)
+"""
+    Pre order: node, left, right
+"""
+class BinaryTreePreOrderTree(object):
+    raise NotImplemented
+
+"""
+    Inorder (LNR) - left, node, right
+    Time Complexity: O(log(N)), balanced tree O(n)
 """
 
 
@@ -41,22 +47,30 @@ class BinarySearchTree(object):
 
     def removeNode(self, data, node):
 
-        if not node:  # an empty node, not found
+        # an empty node, not found
+        if not node:  
             print("data not found...")
             return node
-        elif data < node.data:  # recurse left until data == node.data
+        # recurse left
+        elif data < node.data:
+             # set node as left child whatever children the removed node have
             node.leftChild = self.removeNode(data, node.leftChild)
-        elif data > node.data:  # recurse right until data == node.data
+        # recurce right
+        elif data > node.data: 
+             # set node as left child whatever children the removed node have
             node.rightChild = self.removeNode(data, node.rightChild)
-        else:  # data == node.data
+        # data == node.data
+        else:  
             # node is a leaf node
             if not node.leftChild and not node.rightChild:
                 del node
                 return None
-            if not node.leftChild:  # node has only right child
+             # node has only right child
+            if not node.leftChild:
                 tempNode = node.rightChild
                 del node
                 return tempNode
+             # node has only left child
             elif not node.rightChild:
                 tempNode = node.leftChild
                 del node
@@ -135,3 +149,11 @@ if __name__ == "__main__":
     print(f"Max value: { bst.getMaxValue()}")
     print(f"Min value: {bst.getMinValue()}")
     print(bst.traverse())
+
+
+
+"""
+    Post order: left, right, node
+"""
+class BinaryTreePostOrderTree(object):
+    raise NotImplemented
