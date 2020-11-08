@@ -12,9 +12,9 @@ Terms:
 
 - Space complexity - how much space does algorithm needed as input grows.
 
-Big O - Asymptotic upper bound / worst case.
+Big O (Upper bound) - f(n) is Big O(g(n)) when for some constank k \* g(n), f(n) is equal or no greater than k \* g(n)
 
-- Finding the Big O
+- Finding the Big O (g(n))
 
 1. Find the fastest growing variable.
 
@@ -26,9 +26,9 @@ Big O - Asymptotic upper bound / worst case.
 
    - it has minimal effect on the result.
 
-Big Omega - lower bound / best case.
+Big Omega (lower bound) - f(n) is Big Omega(g(n)) when for some constank k \* g(n), f(n) is atleast or no lesser than k \* g(n)
 
-Big theta - contains lower bound and upper bound / average case.
+Big theta (tight bound) - f(n) is Big Theta(g(n)) when for some constants k1 and k2 where f(n) => k1 _ g(n) and f(n) <= k2 _ g(n)
 
 ### Binary Tree
 
