@@ -19,9 +19,8 @@ import types
 
 
 class StrategyExample:
-
     def __init__(self, func=None):
-        self.name = 'Strategy Example 0'
+        self.name = "Strategy Example 0"
         if func is not None:
             # types.MethodType(func, self) in each execute replacements:
             # <bound method execute_replacement1 of <__main__.StrategyExample object at 0x7f16b0fcd908>>
@@ -34,21 +33,21 @@ class StrategyExample:
 
 
 def execute_replacement1(self):
-    print(self.name + ' from execute 1')
+    print(self.name + " from execute 1")
 
 
 def execute_replacement2(self):
-    print(self.name + ' from execute 2')
+    print(self.name + " from execute 2")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     strat0 = StrategyExample()
 
     strat1 = StrategyExample(execute_replacement1)
-    strat1.name = 'Strategy Example 1'
+    strat1.name = "Strategy Example 1"
 
     strat2 = StrategyExample(execute_replacement2)
-    strat2.name = 'Strategy Example 2'
+    strat2.name = "Strategy Example 2"
 
     strat0.execute()
     strat1.execute()

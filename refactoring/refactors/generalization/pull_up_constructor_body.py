@@ -17,4 +17,3 @@ class Manager(Employee):
         self.grade = grade
 
     # ...
-

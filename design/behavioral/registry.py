@@ -3,6 +3,7 @@
 
 # Holds a reference of the created subclasses
 
+
 class RegistryHolder(type):
 
     REGISTRY = {}
@@ -27,7 +28,7 @@ class RegistryHolder(type):
 
 
 class BaseRegisteredClass(object):
-    __metaclass__ = RegistryHolder # <-- Take Note. Defines the behavior of the class
+    __metaclass__ = RegistryHolder  # <-- Take Note. Defines the behavior of the class
     """
         Any class that will inherit from BaseRegisteredClass will be included
         inside the dict RegistryHolder.REGISTRY, the key being the name of the
@@ -35,13 +36,13 @@ class BaseRegisteredClass(object):
     """
     pass
 
+
 if __name__ == "__main__":
     print("Before subclassing: ")
     for k in RegistryHolder.REGISTRY:
         print(k)
 
     class ClassRegistree(BaseRegisteredClass):
-
         def __init__(self, *args, **kwargs):
             pass
 

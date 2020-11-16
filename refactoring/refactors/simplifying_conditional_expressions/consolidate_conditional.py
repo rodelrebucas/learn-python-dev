@@ -16,4 +16,3 @@ def disabilityAmount():
         return 0
     # compute the disability amount
     # ...
-

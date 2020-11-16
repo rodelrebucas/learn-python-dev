@@ -24,10 +24,13 @@ class AreaCalculator(object):
 
     @property
     def total_area(self):
-        if shape == 'shape1':
+        if shape == "shape1":
             # shape1.calculateArea()
-        if shape == 'shape2':
+            pass
+        if shape == "shape2":
             # shape2.calculateArea()
+            pass
+
 
 # What if you want other shapes's area?
 # should you change AreaCalculator's total_area?
@@ -50,11 +53,12 @@ class Triangle(Shape):
     def calculateArea(self):
         pass
 
+
 # **GOOD
 class AreaCalculator(object):
     def __init__(self, shape):
         self.shape = shape
-        
+
     @property
     def total_area(self):
         self.shape.calculateArea()

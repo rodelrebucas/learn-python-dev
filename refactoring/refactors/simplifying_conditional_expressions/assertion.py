@@ -22,4 +22,3 @@ def getExpenseLimit(self):
         if (self.expenseLimit != NULL_EXPENSE)
         else self.primaryProject.getMemberExpenseLimit()
     )
-

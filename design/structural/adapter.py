@@ -43,16 +43,14 @@ class Car(object):
 
 
 class Adapter(object):
-    
     def __init__(self, obj, **adapted_methods):
-        self.obj = obj # store the obj for referencing its name
-        self.__dict__.update(adapted_methods) # store method/s as attribute
+        self.obj = obj  # store the obj for referencing its name
+        self.__dict__.update(adapted_methods)  # store method/s as attribute
 
     def __getattr__(self, attr):
         # return the adapted method
         # taken from self / object's attr
         return getattr(self.obj, attr)
-
 
 
 def main():

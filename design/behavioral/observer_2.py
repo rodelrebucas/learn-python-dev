@@ -29,10 +29,10 @@ class NewsPublisher:
 
 # abstract observer
 class Subscriber(metaclass=ABCMeta):
-
     @abstractmethod
     def update(self):
         pass
+
 
 # concrete observer
 class SmsSubscriber:
@@ -40,12 +40,12 @@ class SmsSubscriber:
         # subscribe to an observer
         self.publisher = publisher
         self.publisher.attach(self)
-    
+
     def update(self):
         print(self.publisher.getNews())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     news_publisher = NewsPublisher()
     subscriber = SmsSubscribe(news_publisher)
 

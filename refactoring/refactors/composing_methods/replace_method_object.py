@@ -9,10 +9,12 @@ class Order:
         tertiaryBasePrice = 0
         # long computation.
         # ...
+        pass
+
 
 # to
 class Order:
-    #...
+    # ...
     def price(self):
         return PriceCalculator(self).compute()
 
@@ -23,8 +25,9 @@ class PriceCalculator:
         self._secondaryBasePrice = 0
         self._tertiaryBasePrice = 0
         # copy relevant information from order object.
-        #...
+        # ...
 
     def compute(self):
         # long computation.
-        #...
+        # ...
+        pass

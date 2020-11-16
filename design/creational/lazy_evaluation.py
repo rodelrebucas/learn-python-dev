@@ -33,9 +33,11 @@ def lazy_property2(fn):
     @property
     def _lazy_property(self):
         if not hasattr(self, attr):
-            print("Whos parent self?: ", self) # Person
-            print("***Parent: ", fn(self)) # fn is the parents method, get the value of this method
-            print("***Parent attr: ", self.__dict__) # _lazy_parents not exist yet
+            print("Whos parent self?: ", self)  # Person
+            print(
+                "***Parent: ", fn(self)
+            )  # fn is the parents method, get the value of this method
+            print("***Parent attr: ", self.__dict__)  # _lazy_parents not exist yet
             # set/update the parents attributes
             setattr(self, attr, fn(self))
         return getattr(self, attr)

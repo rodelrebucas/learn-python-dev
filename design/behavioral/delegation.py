@@ -29,6 +29,7 @@ class Delegator(object):
                     return attr(*args, **kwargs)
             else:
                 return "Default value"
+
         return wrapper
 
     def add_attr(self, attr):
@@ -63,4 +64,4 @@ if __name__ == "__main__":
     delegator.p("Name")
     delegator.c(1, 2)
 
-    print(delegator.do_anything()) # Default value
+    print(delegator.do_anything())  # Default value

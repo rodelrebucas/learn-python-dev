@@ -44,6 +44,7 @@ class Bank(Payment):
 
     def pay(self):
         # pay logic here
+        pass
     
     # ... other logic,process for
     # getting card, account and funds

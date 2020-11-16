@@ -14,15 +14,14 @@ class Mediator:
 
     # Some processes here...
 
-class Colleague1:
 
+class Colleague1:
     def __init__(self, mediator):
         # Communicates to mediator to reach another colleague
         self._mediator = mediator
 
 
 class Colleague2:
-
     def __init__(self, mediator):
         # Communicates to mediator to reach another colleague
         self._mediator = mediator

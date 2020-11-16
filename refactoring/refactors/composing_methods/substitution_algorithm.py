@@ -11,6 +11,7 @@ def foundPerson(people):
             return "Kent"
     return ""
 
+
 # to
 def foundPerson(people):
     candidates = ["Don", "John", "Kent"]

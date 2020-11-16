@@ -16,8 +16,9 @@ class Graphic:
     Store child components.
     Implement child-related operations in the Component interface.
 """
+
+
 class CompositeGraphic(Graphic):
-    
     def __init__(self):
         self.graphics = []
 
@@ -36,6 +37,8 @@ class CompositeGraphic(Graphic):
     Represent leaf objects in the composition. A leaf has no children.
     Define behavior for primitive objects in the composition.
 """
+
+
 class Ellipse(Graphic):
     def __init__(self, name):
         self.name = name
@@ -44,9 +47,9 @@ class Ellipse(Graphic):
         print("Ellipse: {}".format(self.name))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    graphic = CompositeGraphic() # Main object
+    graphic = CompositeGraphic()  # Main object
     graphic1 = CompositeGraphic()
     graphic2 = CompositeGraphic()
 
@@ -61,11 +64,11 @@ if __name__ == '__main__':
 
     graphic2.add(ellipse4)
 
-    # nested components 
-    graphic.add(graphic1) 
+    # nested components
+    graphic.add(graphic1)
     graphic.add(graphic2)
 
-    graphic.render() # Actual action fires here..
+    graphic.render()  # Actual action fires here..
 
 ### OUTPUT ###
 # Ellipse: 1

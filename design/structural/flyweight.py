@@ -13,21 +13,19 @@ import weakref
 
 
 class FlyweightMeta(type):
-
     def __new__(mcs, name, parents, dct):
-        # Create attribute for creating a dict of instance of weak references 
+        # Create attribute for creating a dict of instance of weak references
         # for shared instances
         # Store only weak references
         # so that garbage collection can be done to the instance that have strong references
-        dct['pool'] = weakref.WeakValueDictionary()
+        dct["pool"] = weakref.WeakValueDictionary()
 
         # 1st execution: Create the base Class called "NewBase" as parent
         # mcs = FlyweightMeta
         # name = Name of the class
-        # parents = the base class 
+        # parents = the base class
         # dct = attributes
         return super(FlyweightMeta, mcs).__new__(mcs, name, parents, dct)
-
 
     # Create a key with:
     # args + kwargs + class name
@@ -39,17 +37,17 @@ class FlyweightMeta(type):
         """
         args_list = list(map(str, args))
         args_list.extend([str(kwargs), cls.__name__])
-        key = ''.join(args_list)
+        key = "".join(args_list)
         return key
 
     def __call__(cls, *args, **kwargs):
         key = FlyweightMeta._serialize_params(cls, *args, **kwargs)
-        pool = getattr(cls, 'pool', {})
+        pool = getattr(cls, "pool", {})
 
         # check if an instance exist already , return that instance
         # else create new instance
         instance = pool.get(key)
-        if instance is None:    
+        if instance is None:
             instance = super(FlyweightMeta, cls).__call__(*args, **kwargs)
             pool[key] = instance
         return instance
@@ -58,10 +56,12 @@ class FlyweightMeta(type):
 class Card(object):
 
     """The object pool. Has builtin reference counting"""
+
     _CardPool = weakref.WeakValueDictionary()
 
     """Flyweight implementation. If the object exists in the
     pool just return it (instead of creating a new one)"""
+
     def __new__(cls, value, suit):
         obj = Card._CardPool.get(value + suit)
         if not obj:
@@ -88,36 +88,35 @@ def with_metaclass(meta, *bases):
 
 
 class Card2(with_metaclass(FlyweightMeta)):
-
     def __init__(self, *args, **kwargs):
         # print('Init {}: {}'.format(self.__class__, (args, kwargs)))
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # comment __new__ and uncomment __init__ to see the difference
-    c1 = Card('9', 'h')
-    c2 = Card('9', 'h')
-    print(c1, c2) # <Card: 9h> <Card: 9h>
-    print(c1 == c2, c1 is c2) # True True
-    print(id(c1), id(c2)) # 140634995573256 140634995573256 (should be the same)
+    c1 = Card("9", "h")
+    c2 = Card("9", "h")
+    print(c1, c2)  # <Card: 9h> <Card: 9h>
+    print(c1 == c2, c1 is c2)  # True True
+    print(id(c1), id(c2))  # 140634995573256 140634995573256 (should be the same)
 
     c1.temp = None
-    c3 = Card('9', 'h')
-    print(hasattr(c3, 'temp')) # True
+    c3 = Card("9", "h")
+    print(hasattr(c3, "temp"))  # True
     c1 = c2 = c3 = None
-    c3 = Card('9', 'h')
-    print(hasattr(c3, 'temp')) # False
+    c3 = Card("9", "h")
+    print(hasattr(c3, "temp"))  # False
 
     # Tests with metaclass
-    instances_pool = getattr(Card2, 'pool')
-    cm1 = Card2('10', 'h', a=1) # Strongly reference
-    cm2 = Card2('10', 'h', a=1) # Reference to cm1 
-    cm3 = Card2('10', 'h', a=2)
+    instances_pool = getattr(Card2, "pool")
+    cm1 = Card2("10", "h", a=1)  # Strongly reference
+    cm2 = Card2("10", "h", a=1)  # Reference to cm1
+    cm3 = Card2("10", "h", a=2)
 
     assert (cm1 == cm2) != cm3
     assert (cm1 is cm2) is not cm3
-    
+
     assert len(instances_pool) == 2
 
     del cm1

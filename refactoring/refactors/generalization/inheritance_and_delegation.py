@@ -19,7 +19,7 @@ class SocialMedia(Profile):
 # to
 class SocialMedia:
     media = "my-media"
-    profile:Profile
+    profile: Profile
 
     def __init__(self, profile):
         self.profile = profile
@@ -28,9 +28,10 @@ class SocialMedia:
     def pMeth(self):
         self.profile.pMeth()
 
+
 profile = Profile()
 media = SocialMedia(profile)
-media.pMeth() # class profiles's pMeth
+media.pMeth()  # class profiles's pMeth
 
 
 # Refactor if:
@@ -39,7 +40,7 @@ media.pMeth() # class profiles's pMeth
 
 
 ## Reverse refactor: Replace Delegation with Inheritance
-# A class contains many simple methods 
+# A class contains many simple methods
 # that delegate to all methods of another class.
 
 # Refactor only if:

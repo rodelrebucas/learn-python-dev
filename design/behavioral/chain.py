@@ -69,6 +69,7 @@ class Client(object):
         for request in requests:
             self.handler.handle(request)
 
+
 ## Coroutine decorator
 ## For nesting coroutine
 def coroutine(func):
@@ -136,7 +137,7 @@ class ClientCoroutine:
         # ready for kick start once
         # send() is called
         self.target = coroutine1(coroutine3(coroutine2(default_coroutine())))
-        # Chained generator functions 
+        # Chained generator functions
 
     def delegate(self, requests):
         for request in requests:
@@ -168,7 +169,7 @@ if __name__ == "__main__":
     print("***Chained method calls***")
     client1 = Client()
     client1.delegate(requests)
-    
+
     print("***Chained  function generators***")
     client2 = ClientCoroutine()
     client2.delegate(requests)
@@ -180,7 +181,12 @@ if __name__ == "__main__":
         client1_delegate(requests)
         client2_delegate(requests)
     # lets check which is faster
-    print("Chained method calls: ", client1_delegate._time,"| Chained function generators: ", client2_delegate._time)
+    print(
+        "Chained method calls: ",
+        client1_delegate._time,
+        "| Chained function generators: ",
+        client2_delegate._time,
+    )
 
 ### OUTPUT ###
 # request 2 handled in handler 1

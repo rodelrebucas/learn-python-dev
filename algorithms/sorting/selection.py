@@ -1,22 +1,31 @@
 """
-Selection Sort
+Selection Sort: O(n^2)
 
-    1. Set minimum value
-    2. Search all elements for minimum value by comparing the set minimum value
-    3. Swap the current minimum value with newly found minimum value
+    Example:
 
+    unsortedArr = [10, 2, 6, 1, 8]
+    
     Pseudo Code:
-        
-        list iteration:
-            minimum_value = first_iter_current_list_index
 
-            second_iteration:
-                minimum_value < second_iter_current_list_index
-                    minimum_value = second_iter_current_list_index
-             
-            swap places
-                current index value  = minimum index value
-                minimum index value = current index value
+        First Iteration:
+        
+            1. Set a starting minimum value:
+
+                minIndex = 0
+            
+            2. Second iteration starting on current index + 1
+
+                a. Second iteration starts at index 1 (0 + 1): [2, 6, 1, 8]
+                b. Look for a value that is lesser than the current minIndex:
+
+                    b.1 Assumed minimum value: 10 at index 1; unsortedArr[minIndex]
+                    b.2 Current value of 2nd iteration: unsortedArr[1] < unsortedArr[minIndex]
+                    b.3 Replace minIndex with current index: minIndex = current index (1)
+                c. Iterate until length of unsortedArr
+            
+            3. Swap the values at the end of second iteration
+
+                unsortedArr[minVal], unsortedArr[current index] = unsortedArr[current index], unsortedArr[minIndex]
 
 """
 
@@ -38,11 +47,8 @@ def selectionSort(data):
                 ## Get the index of the minimum element
                 min_index = j
 
-        ## If minimum value is already in placed
-        # there is no need to swap
-        # meaning , current index is the minimum element
+        ## Swap current index with the minimum index if it's not the minimum index
         if i != min_index:
-            ## Swap current index with the minimum index
             data[i], data[min_index] = data[min_index], data[i]
 
     return data

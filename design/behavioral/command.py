@@ -74,5 +74,5 @@ if __name__ == "__main__":
 
     # Invoker
     agent = Agent()
-    agent.placeOrder(buystock) # actions as parameter
-    agent.placeOrder(sellStock) # actions as parameter
+    agent.placeOrder(buystock)  # actions as parameter
+    agent.placeOrder(sellStock)  # actions as parameter

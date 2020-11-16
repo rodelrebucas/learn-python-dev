@@ -11,8 +11,8 @@ Decouples an abstraction from its implementation.
 
 import abc
 
+
 class AbstractDrawingApI(metaclass=abc.ABCMeta):
-    
     @abc.abstractmethod
     def draw_circle(self, x, y, radius):
         raise NotImplementedError("Drawing circle must be implemented.")
@@ -20,21 +20,18 @@ class AbstractDrawingApI(metaclass=abc.ABCMeta):
 
 # ConcreteImplementor 1/2
 class DrawingAPI1(AbstractDrawingApI):
-
     def draw_circle(self, x, y, radius):
-        print('API1.circle at {}:{} radius {}'.format(x, y, radius))
+        print("API1.circle at {}:{} radius {}".format(x, y, radius))
 
 
 # ConcreteImplementor 2/2
 class DrawingAPI2(AbstractDrawingApI):
-
     def draw_circle(self, x, y, radius):
-        print('API2.circle at {}:{} radius {}'.format(x, y, radius))
+        print("API2.circle at {}:{} radius {}".format(x, y, radius))
 
 
 # Refined Abstraction
 class CircleShape(object):
-
     def __init__(self, x, y, radius, drawing_api):
         self._x = x
         self._y = y
@@ -53,17 +50,14 @@ class CircleShape(object):
 
 
 def main():
-    shapes = (
-        CircleShape(1, 2, 3, DrawingAPI1()),
-        CircleShape(5, 7, 11, DrawingAPI2())
-    )
+    shapes = (CircleShape(1, 2, 3, DrawingAPI1()), CircleShape(5, 7, 11, DrawingAPI2()))
 
     for shape in shapes:
         shape.scale(2.5)
         shape.draw()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 ### OUTPUT ###

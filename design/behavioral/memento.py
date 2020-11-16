@@ -47,11 +47,12 @@ class Transaction(object):
             # revert to the object's saved state
             state_restore()
 
+
 # Option 2 by decorating
 class Transactional(object):
     """Adds transactional semantics to methods.
-        Methods decorated  with
-        @Transactional will rollback to entry-state upon exceptions.
+    Methods decorated  with
+    @Transactional will rollback to entry-state upon exceptions.
     """
 
     def __init__(self, method):
@@ -92,9 +93,10 @@ class NumObj(object):
         self.increment()  # <- will fail and rollback
 
 
-
 # Other simple implementation
 import pickle
+
+
 class Originator:
     """
     Create a memento containing a snapshot of its current internal
@@ -112,7 +114,7 @@ class Originator:
         vars(self).update(previous_state)
 
     def create_memento(self):
-        return pickle.dumps(vars(self)) # equivalent to __dict__
+        return pickle.dumps(vars(self))  # equivalent to __dict__
 
 
 def simulate():
@@ -137,7 +139,7 @@ if __name__ == "__main__":
     try:
         num_obj.do_stuff()
     except Exception as e:
-        print('-> doing stuff failed!')
+        print("-> doing stuff failed!")
         import sys
         import traceback
 

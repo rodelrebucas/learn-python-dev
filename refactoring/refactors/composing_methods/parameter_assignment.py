@@ -13,4 +13,3 @@ def discount(inputVal, quantity):
     if inputVal > 50:
         result -= 2
     # ...
-

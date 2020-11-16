@@ -18,13 +18,11 @@ class AbstractElement(metaclass=abc.ABCMeta):
 
 
 class ConcreteElementA(AbstractElement):
-   
     def accept(self, visitor):
         visitor.visit_concrete_element_a(self)
 
 
 class ConcreteElementB(AbstractElement):
-    
     def accept(self, visitor):
         visitor.visit_concrete_element_b(self)
 
@@ -34,7 +32,7 @@ class AbstractVisitor(metaclass=abc.ABCMeta):
     Abstract process for visitors
     """
 
-     # Processes when visiting an element:
+    # Processes when visiting an element:
 
     @abc.abstractmethod
     def visit_concrete_element_a(self, concrete_element_a):
@@ -46,7 +44,6 @@ class AbstractVisitor(metaclass=abc.ABCMeta):
 
 
 class ConcreteVisitor1(AbstractVisitor):
-   
     def visit_concrete_element_a(self, concrete_element_a):
         pass
 
@@ -55,7 +52,6 @@ class ConcreteVisitor1(AbstractVisitor):
 
 
 class ConcreteVisitor2(AbstractVisitor):
-   
     def visit_concrete_element_a(self, concrete_element_a):
         pass
 

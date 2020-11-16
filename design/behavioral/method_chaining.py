@@ -5,7 +5,6 @@ from __future__ import print_function
 
 
 class Person(object):
-
     def __init__(self, name, action):
         self.action = action
 
@@ -14,7 +13,6 @@ class Person(object):
 
 
 class Calculate(object):
-
     def amount(self, val):
         self.val = val
         return self
@@ -23,10 +21,11 @@ class Calculate(object):
         print(self.val + increase)
         return self
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
 
     calc = Calculate()
-    person = Person('Jack', calc)
+    person = Person("Jack", calc)
     person.do_action().amount(10).plus(10)
 
 ### OUTPUT ###

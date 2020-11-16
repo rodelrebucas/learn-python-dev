@@ -1,9 +1,12 @@
-
 """
+    TODO
     Pre order: node, left, right
 """
+
+
 class BinaryTreePreOrderTree(object):
     raise NotImplemented
+
 
 """
     Inorder (LNR) - left, node, right
@@ -48,29 +51,29 @@ class BinarySearchTree(object):
     def removeNode(self, data, node):
 
         # an empty node, not found
-        if not node:  
+        if not node:
             print("data not found...")
             return node
         # recurse left
         elif data < node.data:
-             # set node as left child whatever children the removed node have
+            # set node as left child whatever children the removed node have
             node.leftChild = self.removeNode(data, node.leftChild)
         # recurce right
-        elif data > node.data: 
-             # set node as left child whatever children the removed node have
+        elif data > node.data:
+            # set node as left child whatever children the removed node have
             node.rightChild = self.removeNode(data, node.rightChild)
         # data == node.data
-        else:  
+        else:
             # node is a leaf node
             if not node.leftChild and not node.rightChild:
                 del node
                 return None
-             # node has only right child
+            # node has only right child
             if not node.leftChild:
                 tempNode = node.rightChild
                 del node
                 return tempNode
-             # node has only left child
+            # node has only left child
             elif not node.rightChild:
                 tempNode = node.leftChild
                 del node
@@ -151,9 +154,11 @@ if __name__ == "__main__":
     print(bst.traverse())
 
 
-
 """
+    TODO
     Post order: left, right, node
 """
+
+
 class BinaryTreePostOrderTree(object):
     raise NotImplemented

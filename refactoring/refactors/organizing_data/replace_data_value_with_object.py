@@ -13,4 +13,3 @@ class Customer:
 
 class Order:
     customer: Customer
-
