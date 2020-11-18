@@ -5,6 +5,7 @@
 def binarySearch(arr, searchVal):
     minv = 0
     maxv = len(arr) - 1
+    # maxv < minv; search index has reach -1 index or greater than array size
     while maxv >= minv:
         # We always guess at the middle of the array.
         guess = int((minv + maxv) / 2)
@@ -26,6 +27,7 @@ def binarySearch(arr, searchVal):
 
 
 if __name__ == "__main__":
-    s = 1
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 34, 67, 11]
+    s = 3
+    # Sorted array
+    arr = [1, 2, 3, 4, 5]
     binarySearch(arr, s)

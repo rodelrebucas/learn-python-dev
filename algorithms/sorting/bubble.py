@@ -22,10 +22,9 @@ import pytest
 
 def bubbleSort(l):
     # outer iterations is len(l) - 1
-    # e.g [5,4,3,2,1] = 1, 2, 3, 4 = iterations
-    # this makes sure j + 1 won't exceed with list's length
+    # inner iterations is up outer - 1
     for i in range(len(l) - 1, 0, -1):
-        for j in range(i):
+        for j in range(i):  # this makes sure j + 1 won't exceed with list's length
             # Swap
             if l[j] > l[j + 1]:
                 l[j], l[j + 1] = l[j + 1], l[j]
