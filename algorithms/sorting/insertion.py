@@ -1,8 +1,5 @@
 """
-    TODO: Implement
     O(n^2), Best case O(n) - sorted, nearly sorted
-    Insert the value in the right place in the sub array
-
     E.g [3,1,7,2,6]
     Pseudo code:
     1. Create sub array at index 0 which is [3], assumed to be sorted.
